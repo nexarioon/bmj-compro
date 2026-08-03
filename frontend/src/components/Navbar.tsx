@@ -48,16 +48,16 @@ export default function NavbarComponent() {
           >
             <Button
               variant="outline"
-              className="text-[16px] font-normal flex gap-2 cursor-pointer border-border text-primary hover:bg-secondary hover:text-muted-foreground transition-all duration-[400ms] rounded-[5px] h-10 px-4"
+              className="text-[12px] uppercase tracking-wider font-bold flex gap-2 cursor-pointer border-card-foreground text-card-foreground hover:bg-card-foreground hover:text-background transition-all duration-[400ms] rounded-none h-10 px-6"
             >
-              <Phone className="size-[18px]" />
+              <Phone className="size-[14px]" />
               WhatsApp
             </Button>
           </a>
           <Link to="/kontak?ref=quotation">
-            <Button className="text-[16px] font-medium flex gap-2 group cursor-pointer bg-primary hover:opacity-90 text-primary-foreground transition-all duration-[400ms] rounded-[5px] h-10 px-4">
-              Hubungi Kami
-              <ArrowRight className="size-[18px] group-hover:translate-x-1 transition-transform" />
+            <Button className="text-[12px] uppercase tracking-wider font-bold flex gap-2 group cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-[400ms] rounded-none h-10 px-6">
+              Request Quote
+              <ArrowRight className="size-[14px] group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
         </div>
@@ -82,16 +82,16 @@ export default function NavbarComponent() {
               to={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
               className={cn(
-                "block px-4 py-3 text-[16px] font-normal transition-colors duration-[400ms] rounded-[5px]",
+                "block px-4 py-3 text-[14px] font-bold uppercase tracking-wider transition-colors duration-[400ms] border-b border-border last:border-0",
                 isActive(item.link)
-                  ? "text-muted-foreground bg-secondary/50 font-semibold"
-                  : "text-primary hover:text-muted-foreground hover:bg-secondary",
+                  ? "text-primary"
+                  : "text-card-foreground hover:text-primary",
               )}
             >
               <span className="block">{item.name}</span>
             </Link>
           ))}
-          <div className="flex w-full flex-col gap-3 pt-4">
+          <div className="flex w-full flex-col gap-3 pt-6 pb-2">
             <a
               href="https://wa.me/6281234567890?text=Halo%20PT.%20Budi%20Mulya%20Jaya,%20saya%20ingin%20berkonsultasi%20mengenai%20proyek."
               target="_blank"
@@ -100,9 +100,9 @@ export default function NavbarComponent() {
             >
               <Button
                 variant="outline"
-                className="w-full text-[16px] font-normal flex gap-2 justify-center border-border text-primary hover:bg-secondary hover:text-muted-foreground transition-all duration-[400ms] rounded-[5px] h-11"
+                className="w-full text-[13px] uppercase tracking-wider font-bold flex gap-2 justify-center border-card-foreground text-card-foreground hover:bg-card-foreground hover:text-background transition-all duration-[400ms] rounded-none h-12"
               >
-                <Phone className="size-[18px]" />
+                <Phone className="size-[16px]" />
                 WhatsApp
               </Button>
             </a>
@@ -110,8 +110,8 @@ export default function NavbarComponent() {
               to="/kontak?ref=quotation"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <Button className="w-full text-[16px] font-medium bg-primary hover:opacity-90 text-primary-foreground rounded-[5px] h-11 transition-all duration-[400ms]">
-                Hubungi Kami
+              <Button className="w-full text-[13px] uppercase tracking-wider font-bold bg-primary hover:bg-primary/90 text-primary-foreground rounded-none h-12 transition-all duration-[400ms]">
+                Request Quote
               </Button>
             </Link>
           </div>

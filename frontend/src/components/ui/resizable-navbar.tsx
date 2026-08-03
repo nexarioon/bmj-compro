@@ -42,7 +42,7 @@ export function Navbar({
           className={cn(
             "fixed left-0 right-0 z-50 transition-all duration-[400ms] ease-out",
             isScrolled
-              ? "top-4 mx-auto w-[96%] max-w-7xl rounded-[5px] border border-border bg-background"
+              ? "top-0 border-b border-border bg-background/95 backdrop-blur-md shadow-sm"
               : "top-0 w-full border-b border-border bg-background",
             className,
           )}
@@ -66,7 +66,9 @@ export function NavBody({
     <div
       className={cn(
         "hidden md:flex items-center justify-between transition-all duration-[400ms] ease-out",
-        isScrolled ? "py-[16px] px-6" : "py-4 px-8",
+        isScrolled
+          ? "py-4 px-6 max-w-7xl mx-auto w-full"
+          : "py-5 px-6 max-w-7xl mx-auto w-full",
         className,
       )}
     >
@@ -82,11 +84,11 @@ export function NavbarLogo({ className }: { className?: string }) {
         BMJ
       </div>
       <div className="flex flex-col">
-        <span className="font-bold tracking-tight text-[16px] sm:text-[20px] leading-tight text-muted-foreground">
-          Budi Mulya Jaya
+        <span className="font-black tracking-tighter text-[18px] sm:text-[22px] leading-none text-card-foreground">
+          BUDI MULYA JAYA
         </span>
-        <span className="text-[12px] tracking-wider text-primary">
-          Road Construction
+        <span className="text-[10px] tracking-widest uppercase text-muted-foreground font-semibold mt-[2px]">
+          General Contractor
         </span>
       </div>
     </Link>
@@ -115,7 +117,7 @@ export function NavItems({
     <div
       className={cn(
         "flex items-center transition-all duration-[400ms] ease-out",
-        isScrolled ? "gap-2" : "gap-2",
+        isScrolled ? "gap-6" : "gap-8",
         className,
       )}
     >
@@ -126,27 +128,23 @@ export function NavItems({
           onMouseEnter={() => setHoveredIdx(idx)}
           onMouseLeave={() => setHoveredIdx(null)}
           className={cn(
-            "relative text-[16px] font-normal transition-colors duration-[400ms] ease-out",
-            isScrolled ? "px-3 py-2 rounded-[5px]" : "px-4 py-2 rounded-[5px]",
+            "relative text-[13px] font-semibold tracking-wide uppercase transition-colors duration-[400ms] ease-out",
+            isScrolled ? "py-2" : "py-2",
             isActive(item.link)
-              ? "text-muted-foreground font-semibold"
-              : "text-primary hover:text-muted-foreground",
+              ? "text-primary"
+              : "text-card-foreground hover:text-primary",
           )}
         >
           {hoveredIdx === idx && (
             <motion.span
               layoutId="hoverBackground"
-              className="absolute inset-0 bg-secondary -z-10 rounded-[5px]"
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="absolute -bottom-1 left-0 right-0 h-[2px] bg-primary"
+              transition={{ duration: 0.3, ease: "easeOut" }}
             />
           )}
 
           {isActive(item.link) && hoveredIdx !== idx && (
-            <span
-              className={cn(
-                "absolute inset-0 bg-secondary/50 -z-10 rounded-[5px]",
-              )}
-            />
+            <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-primary" />
           )}
 
           {item.name}
@@ -167,7 +165,7 @@ export function MobileNav({
   return (
     <div
       className={cn(
-        "md:hidden flex flex-col transition-all duration-[400ms] ease-out",
+        "md:hidden flex flex-col transition-all duration-[400ms] ease-out max-w-7xl mx-auto w-full",
         isScrolled ? "py-2 px-4" : "py-4 px-6",
         className,
       )}
@@ -204,7 +202,7 @@ export function MobileNavToggle({
     <button
       onClick={onClick}
       className={cn(
-        "inline-flex items-center justify-center p-2 rounded-[5px] text-muted-foreground hover:bg-secondary focus:outline-none transition-colors duration-[400ms] ease-out",
+        "inline-flex items-center justify-center p-2 text-card-foreground hover:text-primary focus:outline-none transition-colors duration-[400ms] ease-out",
         className,
       )}
       aria-label="Toggle menu"
