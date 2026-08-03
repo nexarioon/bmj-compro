@@ -40,7 +40,7 @@ export default function NavbarComponent() {
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <a
             href="https://wa.me/6281234567890?text=Halo%20PT.%20Budi%20Mulya%20Jaya,%20saya%20ingin%20berkonsultasi%20mengenai%20proyek."
             target="_blank"
@@ -48,16 +48,16 @@ export default function NavbarComponent() {
           >
             <Button
               variant="outline"
-              className="text-[12px] uppercase tracking-wider font-bold flex gap-2 cursor-pointer border-card-foreground text-card-foreground hover:bg-card-foreground hover:text-background transition-all duration-[400ms] rounded-none h-10 px-6"
+              className="text-[11px] uppercase tracking-wider font-bold flex gap-2 cursor-pointer border-card-foreground text-card-foreground hover:bg-card-foreground hover:text-background transition-all duration-[400ms] rounded-none h-9 px-4"
             >
-              <Phone className="size-[14px]" />
+              <Phone className="size-[12px]" />
               WhatsApp
             </Button>
           </a>
           <Link to="/kontak?ref=quotation">
-            <Button className="text-[12px] uppercase tracking-wider font-bold flex gap-2 group cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-[400ms] rounded-none h-10 px-6">
+            <Button className="text-[11px] uppercase tracking-wider font-bold flex gap-2 group cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-[400ms] rounded-none h-9 px-4">
               Request Quote
-              <ArrowRight className="size-[14px] group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="size-[12px] group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
         </div>

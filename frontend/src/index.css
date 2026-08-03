@@ -105,6 +105,6 @@
     h4,
     h5,
     h6 {
-        @apply font-heading tracking-tight text-card-foreground font-bold;
+        @apply font-heading tracking-tight font-bold text-inherit;
     }
 }

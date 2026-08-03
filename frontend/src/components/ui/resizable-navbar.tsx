@@ -79,15 +79,15 @@ export function NavBody({
 
 export function NavbarLogo({ className }: { className?: string }) {
   return (
-    <Link to="/" className={cn("flex items-center gap-3 text-left", className)}>
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary rounded text-primary-foreground font-black text-xl tracking-tighter">
+    <Link to="/" className={cn("flex items-center gap-2 text-left", className)}>
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center bg-primary rounded text-primary-foreground font-black text-sm tracking-tighter">
         BMJ
       </div>
       <div className="flex flex-col">
-        <span className="font-black tracking-tighter text-[18px] sm:text-[22px] leading-none text-card-foreground">
+        <span className="font-black tracking-tighter text-[13px] sm:text-[14px] leading-none text-card-foreground">
           BUDI MULYA JAYA
         </span>
-        <span className="text-[10px] tracking-widest uppercase text-muted-foreground font-semibold mt-[2px]">
+        <span className="text-[7px] tracking-widest uppercase text-muted-foreground font-semibold mt-[2px]">
           General Contractor
         </span>
       </div>

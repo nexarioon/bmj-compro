@@ -82,7 +82,7 @@ export default function Home() {
   const differentiators = [
     {
       title: "Jaminan Kualitas Material & AMP Resmi",
-      desc: "Kami bekerjasama langsung dengan Asphalt Mixing Plant (AMP) berlisensi uji lab Bina Marga untuk menjamin aspal yang digelar selalu baru, bersih, dan sesuai formula.",
+      desc: "Kami bekerjasama langsung dengan Asphalt Mixing Plant (AMP) berlisensi uji lab nasional untuk menjamin aspal yang digelar selalu baru, bersih, dan sesuai formula.",
       icon: ShieldCheck,
     },
     {
@@ -125,10 +125,6 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 z-10">
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-500 rounded-full text-xs font-bold uppercase tracking-wider">
-              <HardHat className="size-3.5" /> Kontraktor Jalan & Aspal Hotmix
-              Nasional
-            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none uppercase">
               Membangun Infrastruktur <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-500">
@@ -154,7 +150,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto font-bold border-zinc-700 hover:bg-zinc-800 text-white cursor-pointer"
+                  className="w-full sm:w-auto font-bold border-zinc-500 bg-transparent text-zinc-100 hover:bg-zinc-100 hover:text-zinc-950 hover:border-zinc-100 cursor-pointer transition-colors"
                 >
                   Lihat Portofolio Proyek
                 </Button>
@@ -380,8 +376,8 @@ export default function Home() {
             <h2 className="text-xs uppercase tracking-widest text-primary font-bold">
               Prosedur Kualitas Kerja
             </h2>
-            <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight uppercase">
-              Metode Pengaspalan Standar Bina Marga
+            <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight uppercase text-white">
+              Metode Pengaspalan Standar Nasional
             </h3>
             <p className="text-zinc-400">
               Setiap langkah pengerjaan dipantau ketat oleh Quality Control
