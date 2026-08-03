@@ -1,0 +1,12 @@
+{
+  "name": "compro-bmj",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npx --prefix backend wrangler dev -c backend/wrangler.jsonc",
+    "build:frontend": "npm --prefix frontend run build",
+    "build:backend": "npm --prefix backend run typecheck",
+    "build": "npm run build:frontend && npm run build:backend"
+  }
+}
