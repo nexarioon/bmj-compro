@@ -47,7 +47,7 @@ export function Navbar({
           className={cn(
             "fixed left-0 right-0 z-50 transition-all duration-500",
             isScrolled
-              ? "top-4 mx-auto w-[96%] max-w-7xl rounded-full border border-border bg-background/85 backdrop-blur-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+              ? "top-4 mx-auto w-[96%] max-w-7xl rounded-full border border-border bg-surface/85 backdrop-blur-lg shadow-[var(--shadow-elevated)]"
               : "top-0 w-full border-b border-border bg-background/95 backdrop-blur-md",
             className,
           )}
@@ -71,7 +71,7 @@ export function NavBody({
     <div
       className={cn(
         "hidden md:flex items-center justify-between transition-all duration-300",
-        isScrolled ? "py-2.5 px-6" : "py-4 px-8",
+        isScrolled ? "py-[10px] px-4" : "py-4 px-6",
         className,
       )}
     >
@@ -131,11 +131,11 @@ export function NavItems({
           onMouseEnter={() => setHoveredIdx(idx)}
           onMouseLeave={() => setHoveredIdx(null)}
           className={cn(
-            "relative text-sm font-semibold transition-colors",
+            "relative text-[11px] font-medium transition-colors",
             isScrolled ? "px-3 py-1.5 rounded-full" : "px-4 py-2 rounded-md",
             isActive(item.link)
               ? "text-primary font-bold"
-              : "text-muted-foreground hover:text-foreground",
+              : "text-accent hover:text-primary",
           )}
         >
           {hoveredIdx === idx && (
@@ -152,7 +152,7 @@ export function NavItems({
           {isActive(item.link) && hoveredIdx !== idx && (
             <span
               className={cn(
-                "absolute inset-0 bg-primary/10 -z-10",
+                "absolute inset-0 bg-surface -z-10",
                 isScrolled ? "rounded-full" : "rounded-md",
               )}
             />

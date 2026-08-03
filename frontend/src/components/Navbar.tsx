@@ -48,16 +48,16 @@ export default function NavbarComponent() {
           >
             <Button
               variant="outline"
-              className="font-bold flex gap-2 cursor-pointer border-green-600 text-green-600 hover:bg-green-50 hover:text-green-700 transition-all rounded-full"
+              className="text-[11px] font-bold flex gap-2 cursor-pointer border-border text-primary hover:bg-surface hover:text-primary transition-all rounded-full h-8 px-4"
             >
-              <Phone className="size-4" />
+              <Phone className="size-[14px]" />
               WhatsApp
             </Button>
           </a>
           <Link to="/kontak?ref=quotation">
-            <Button className="font-bold flex gap-2 group cursor-pointer bg-primary hover:bg-primary/95 text-primary-foreground transition-all rounded-full">
+            <Button className="text-[11px] font-bold flex gap-2 group cursor-pointer bg-primary hover:opacity-90 text-primary-foreground transition-all rounded-full h-8 px-4">
               Hubungi Kami
-              <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="size-[14px] group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
         </div>
@@ -100,9 +100,9 @@ export default function NavbarComponent() {
             >
               <Button
                 variant="outline"
-                className="w-full font-bold flex gap-2 justify-center border-green-600 text-green-600 hover:bg-green-50 hover:text-green-700 transition-all rounded-full"
+                className="w-full text-[11px] font-bold flex gap-2 justify-center border-border text-primary hover:bg-surface hover:text-primary transition-all rounded-full h-9"
               >
-                <Phone className="size-4" />
+                <Phone className="size-[14px]" />
                 WhatsApp
               </Button>
             </a>
@@ -110,7 +110,7 @@ export default function NavbarComponent() {
               to="/kontak?ref=quotation"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <Button className="w-full font-bold bg-primary hover:bg-primary/95 text-primary-foreground rounded-full">
+              <Button className="w-full text-[11px] font-bold bg-primary hover:opacity-90 text-primary-foreground rounded-full h-9">
                 Hubungi Kami
               </Button>
             </Link>
