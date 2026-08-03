@@ -38,17 +38,12 @@ export function Navbar({
             y: visible ? 0 : -100,
             opacity: visible ? 1 : 0,
           }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 20,
-            mass: 0.5,
-          }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className={cn(
-            "fixed left-0 right-0 z-50 transition-all duration-500",
+            "fixed left-0 right-0 z-50 transition-all duration-[400ms] ease-out",
             isScrolled
-              ? "top-4 mx-auto w-[96%] max-w-7xl rounded-full border border-border bg-surface/85 backdrop-blur-lg shadow-[var(--shadow-elevated)]"
-              : "top-0 w-full border-b border-border bg-background/95 backdrop-blur-md",
+              ? "top-4 mx-auto w-[96%] max-w-7xl rounded-[5px] border border-border bg-background"
+              : "top-0 w-full border-b border-border bg-background",
             className,
           )}
         >
@@ -70,8 +65,8 @@ export function NavBody({
   return (
     <div
       className={cn(
-        "hidden md:flex items-center justify-between transition-all duration-300",
-        isScrolled ? "py-[10px] px-4" : "py-4 px-6",
+        "hidden md:flex items-center justify-between transition-all duration-[400ms] ease-out",
+        isScrolled ? "py-[16px] px-6" : "py-4 px-8",
         className,
       )}
     >
@@ -87,11 +82,11 @@ export function NavbarLogo({ className }: { className?: string }) {
         BMJ
       </div>
       <div className="flex flex-col">
-        <span className="font-extrabold tracking-tight text-base sm:text-lg leading-tight uppercase text-foreground">
+        <span className="font-bold tracking-tight text-[16px] sm:text-[20px] leading-tight text-muted-foreground">
           Budi Mulya Jaya
         </span>
-        <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
-          Road Construction & Contractor
+        <span className="text-[12px] tracking-wider text-primary">
+          Road Construction
         </span>
       </div>
     </Link>
@@ -119,8 +114,8 @@ export function NavItems({
   return (
     <div
       className={cn(
-        "flex items-center transition-all duration-300",
-        isScrolled ? "gap-0.5" : "gap-1",
+        "flex items-center transition-all duration-[400ms] ease-out",
+        isScrolled ? "gap-2" : "gap-2",
         className,
       )}
     >
@@ -131,29 +126,25 @@ export function NavItems({
           onMouseEnter={() => setHoveredIdx(idx)}
           onMouseLeave={() => setHoveredIdx(null)}
           className={cn(
-            "relative text-[11px] font-medium transition-colors",
-            isScrolled ? "px-3 py-1.5 rounded-full" : "px-4 py-2 rounded-md",
+            "relative text-[16px] font-normal transition-colors duration-[400ms] ease-out",
+            isScrolled ? "px-3 py-2 rounded-[5px]" : "px-4 py-2 rounded-[5px]",
             isActive(item.link)
-              ? "text-primary font-bold"
-              : "text-accent hover:text-primary",
+              ? "text-muted-foreground font-semibold"
+              : "text-primary hover:text-muted-foreground",
           )}
         >
           {hoveredIdx === idx && (
             <motion.span
               layoutId="hoverBackground"
-              className="absolute inset-0 bg-muted/60 dark:bg-muted/30 -z-10"
-              style={{
-                borderRadius: isScrolled ? "9999px" : "0.375rem",
-              }}
-              transition={{ type: "spring", stiffness: 380, damping: 30 }}
+              className="absolute inset-0 bg-secondary -z-10 rounded-[5px]"
+              transition={{ duration: 0.4, ease: "easeOut" }}
             />
           )}
 
           {isActive(item.link) && hoveredIdx !== idx && (
             <span
               className={cn(
-                "absolute inset-0 bg-surface -z-10",
-                isScrolled ? "rounded-full" : "rounded-md",
+                "absolute inset-0 bg-secondary/50 -z-10 rounded-[5px]",
               )}
             />
           )}
@@ -176,7 +167,7 @@ export function MobileNav({
   return (
     <div
       className={cn(
-        "md:hidden flex flex-col transition-all duration-300",
+        "md:hidden flex flex-col transition-all duration-[400ms] ease-out",
         isScrolled ? "py-2 px-4" : "py-4 px-6",
         className,
       )}
@@ -213,7 +204,7 @@ export function MobileNavToggle({
     <button
       onClick={onClick}
       className={cn(
-        "inline-flex items-center justify-center p-2 rounded-full text-foreground hover:bg-muted focus:outline-none transition-colors",
+        "inline-flex items-center justify-center p-2 rounded-[5px] text-muted-foreground hover:bg-secondary focus:outline-none transition-colors duration-[400ms] ease-out",
         className,
       )}
       aria-label="Toggle menu"
@@ -241,7 +232,7 @@ export function MobileNavMenu({
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.25 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className={cn(
             "overflow-hidden border-t border-border/60 mt-3 pt-3 flex flex-col gap-1 pb-4",
             isScrolled ? "px-2" : "px-1",

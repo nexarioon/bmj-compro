@@ -48,16 +48,16 @@ export default function NavbarComponent() {
           >
             <Button
               variant="outline"
-              className="text-[11px] font-bold flex gap-2 cursor-pointer border-border text-primary hover:bg-surface hover:text-primary transition-all rounded-full h-8 px-4"
+              className="text-[16px] font-normal flex gap-2 cursor-pointer border-border text-primary hover:bg-secondary hover:text-muted-foreground transition-all duration-[400ms] rounded-[5px] h-10 px-4"
             >
-              <Phone className="size-[14px]" />
+              <Phone className="size-[18px]" />
               WhatsApp
             </Button>
           </a>
           <Link to="/kontak?ref=quotation">
-            <Button className="text-[11px] font-bold flex gap-2 group cursor-pointer bg-primary hover:opacity-90 text-primary-foreground transition-all rounded-full h-8 px-4">
+            <Button className="text-[16px] font-medium flex gap-2 group cursor-pointer bg-primary hover:opacity-90 text-primary-foreground transition-all duration-[400ms] rounded-[5px] h-10 px-4">
               Hubungi Kami
-              <ArrowRight className="size-[14px] group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="size-[18px] group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
         </div>
@@ -82,16 +82,16 @@ export default function NavbarComponent() {
               to={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
               className={cn(
-                "block px-4 py-2.5 text-sm font-bold transition-colors rounded-lg",
+                "block px-4 py-3 text-[16px] font-normal transition-colors duration-[400ms] rounded-[5px]",
                 isActive(item.link)
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
+                  ? "text-muted-foreground bg-secondary/50 font-semibold"
+                  : "text-primary hover:text-muted-foreground hover:bg-secondary",
               )}
             >
               <span className="block">{item.name}</span>
             </Link>
           ))}
-          <div className="flex w-full flex-col gap-3 pt-3">
+          <div className="flex w-full flex-col gap-3 pt-4">
             <a
               href="https://wa.me/6281234567890?text=Halo%20PT.%20Budi%20Mulya%20Jaya,%20saya%20ingin%20berkonsultasi%20mengenai%20proyek."
               target="_blank"
@@ -100,9 +100,9 @@ export default function NavbarComponent() {
             >
               <Button
                 variant="outline"
-                className="w-full text-[11px] font-bold flex gap-2 justify-center border-border text-primary hover:bg-surface hover:text-primary transition-all rounded-full h-9"
+                className="w-full text-[16px] font-normal flex gap-2 justify-center border-border text-primary hover:bg-secondary hover:text-muted-foreground transition-all duration-[400ms] rounded-[5px] h-11"
               >
-                <Phone className="size-[14px]" />
+                <Phone className="size-[18px]" />
                 WhatsApp
               </Button>
             </a>
@@ -110,7 +110,7 @@ export default function NavbarComponent() {
               to="/kontak?ref=quotation"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <Button className="w-full text-[11px] font-bold bg-primary hover:opacity-90 text-primary-foreground rounded-full h-9">
+              <Button className="w-full text-[16px] font-medium bg-primary hover:opacity-90 text-primary-foreground rounded-[5px] h-11 transition-all duration-[400ms]">
                 Hubungi Kami
               </Button>
             </Link>
