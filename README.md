@@ -1,18 +1,18 @@
 # BMJ — Company Profile
 
-Website company profile BMJ: frontend React 19 + Vite + Tailwind v4 + shadcn/ui, backend **Hono** yang dideploy ke **Cloudflare Workers**.
+Company profile website: React 19 + Vite + Tailwind v4 + shadcn/ui frontend, **Hono** API deployed on **Cloudflare Workers**.
 
-## Struktur
+## Structure
 
 ```
 bmj-compro/
 ├── frontend/          # React 19 + TypeScript + Vite + Tailwind v4 + shadcn/ui + framer-motion
 │   └── src/{pages,components,layouts,data,lib}
-├── backend/           # Hono di Cloudflare Workers (wrangler.jsonc)
-└── package.json       # script orkestrasi root
+├── backend/           # Hono on Cloudflare Workers (wrangler.jsonc)
+└── package.json       # root orchestration scripts
 ```
 
-## Menjalankan
+## Run
 
 ```bash
 npm install
@@ -23,13 +23,13 @@ npm run dev:frontend
 # backend (wrangler dev)
 npm run dev:backend
 
-# build frontend
+# production build of the frontend
 npm run build:frontend
 ```
 
 ## Stack
 
-| Bagian | Teknologi |
+| Layer | Tech |
 |---|---|
 | Frontend | React 19, TypeScript, Vite, Tailwind CSS v4, shadcn/ui, framer-motion, React Router 7 |
 | Backend | Hono, Cloudflare Workers |
