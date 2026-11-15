@@ -1,15 +1,15 @@
-# BMJ — Company Profile
+# BMJ company profile
 
-Company profile website: React 19 + Vite + Tailwind v4 + shadcn/ui frontend, **Hono** API deployed on **Cloudflare Workers**.
+Company profile website. The frontend is React 19 with Vite and Tailwind v4, the API is Hono on Cloudflare Workers.
 
 ## Structure
 
 ```
 bmj-compro/
-├── frontend/          # React 19 + TypeScript + Vite + Tailwind v4 + shadcn/ui + framer-motion
+├── frontend/          # React 19, TypeScript, Vite, Tailwind v4, shadcn/ui, framer-motion
 │   └── src/{pages,components,layouts,data,lib}
 ├── backend/           # Hono on Cloudflare Workers (wrangler.jsonc)
-└── package.json       # root orchestration scripts
+└── package.json       # root scripts
 ```
 
 ## Run
@@ -17,14 +17,9 @@ bmj-compro/
 ```bash
 npm install
 
-# frontend (Vite dev server)
-npm run dev:frontend
-
-# backend (wrangler dev)
-npm run dev:backend
-
-# production build of the frontend
-npm run build:frontend
+npm run dev:frontend    # Vite dev server
+npm run dev:backend     # wrangler dev
+npm run build:frontend  # production build
 ```
 
 ## Stack
